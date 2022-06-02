@@ -19,6 +19,7 @@ Eval
     ADD R3, R2, R1 ;
     ADD R3, R3, #0
     BRp Eval
+    OUT
     RET
     
     
@@ -28,6 +29,6 @@ ASCII   .FILL x30           ; mask to add to convert to ASCII
 NEGASCII .FILL xFFD0         ; negated ASCII maask (-x30)
 
 twos_comp ; Use R0 as the parameter
-    .fill 3100
+    .fill x3100
     
     .END
